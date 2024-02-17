@@ -1,18 +1,18 @@
-let initialSize = 16;
-resizeSquare(initialSize);
+let initialSquareSize = 16;
+let containerSize = 500;
+resizeSquare(initialSquareSize);
 
 function resizeSquare (size = initialSize) {
-  let totalSize = size * 10;
   let container = document.querySelector('.container');
-  container.style.width = totalSize + 'px';
-  container.style.height = totalSize + 'px';
+  container.style.width = containerSize + 'px';
+  container.style.height = containerSize + 'px';
+  let numDivs = size ** 2; 
 
-  for(let i = 0; i < size ** 2; i++) {
+  for(let i = 0; i < numDivs; i++) {
     let div = document.createElement('div');
-    div.style.height = '8px';
-    div.style.width = '8px';
+    div.style.height = (100 / size) + '%';
+    div.style.width = (100 / size) + '%';
     div.style.backgroundColor = 'white';
-    div.style.border = 'thin solid blue';
     container.appendChild(div);
     
     div.addEventListener('mouseover', () => {
@@ -20,6 +20,7 @@ function resizeSquare (size = initialSize) {
     });
   }
 }
+
 
 let button = document.querySelector('button');
 button.addEventListener('click', () => {
