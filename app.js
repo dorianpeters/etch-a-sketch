@@ -11,9 +11,9 @@ for(let i = 0; i < squareSize ** 2; i++) {
   div.style.backgroundColor = 'white';
   div.style.border = 'thin solid blue';
   container.appendChild(div);
-
+  
   // Event listener not working
-  div.addEventListener('hover', () => {
+  div.addEventListener('mouseover', () => {
     div.style.backgroundColor = 'red';
   });
 }
