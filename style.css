@@ -1,5 +1,6 @@
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: darkgrey;
@@ -12,4 +13,8 @@ body {
   flex-shrink: 0;
   align-content: flex-start;
   background-color: black;
+}
+
+button {
+  margin-bottom: 50px;
 }
